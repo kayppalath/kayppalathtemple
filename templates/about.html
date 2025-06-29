@@ -1,0 +1,163 @@
+{% extends "base.html" %}
+
+{% block title %}About - {{ temple.name }}{% endblock %}
+
+{% block content %}
+<!-- About Hero Section -->
+<section class="hero-section" style="padding: 80px 0;">
+    <div class="container">
+        <h1 class="hero-title">About {{ temple.name }}</h1>
+        <p class="hero-subtitle">Discover the sacred history and spiritual significance of our ancient temple</p>
+    </div>
+</section>
+
+<!-- Temple History Section -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="section-title">Sacred History</h2>
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-4 text-center mb-4">
+                                <i class="fas fa-landmark fa-4x text-primary mb-3"></i>
+                                <h5>Ancient Origins</h5>
+                                <p class="text-muted">Centuries of devotion</p>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="temple-history">
+                                    {{ temple.history | safe }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Deity Significance Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="section-title">Deity Significance</h2>
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-4 text-center mb-4">
+                                <i class="fas fa-om fa-4x text-primary mb-3"></i>
+                                <h5>{{ temple.deity }}</h5>
+                                <p class="text-muted">Presiding Deity</p>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="deity-significance">
+                                    {{ temple.deity_significance | safe }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Temple Features Section -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="section-title">Temple Features</h2>
+        <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-archway fa-3x text-primary mb-3"></i>
+                        <h5>Sacred Architecture</h5>
+                        <p>The temple showcases traditional Kerala architecture with intricate carvings and spiritual symbolism that reflect ancient wisdom and divine craftsmanship.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-fire fa-3x text-primary mb-3"></i>
+                        <h5>Sacred Rituals</h5>
+                        <p>Daily prayers, special ceremonies, and seasonal festivals maintain the spiritual energy and connect devotees with divine consciousness.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-leaf fa-3x text-primary mb-3"></i>
+                        <h5>Natural Surroundings</h5>
+                        <p>Set in serene natural surroundings, the temple provides a peaceful environment for meditation, prayer, and spiritual contemplation.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-hands-helping fa-3x text-primary mb-3"></i>
+                        <h5>Community Service</h5>
+                        <p>The temple serves as a center for community activities, cultural preservation, and spiritual education for all age groups.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-book fa-3x text-primary mb-3"></i>
+                        <h5>Sacred Texts</h5>
+                        <p>Ancient scriptures and spiritual texts are preserved and studied, maintaining the continuity of traditional knowledge and wisdom.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-dove fa-3x text-primary mb-3"></i>
+                        <h5>Peace & Harmony</h5>
+                        <p>The temple promotes peace, harmony, and spiritual growth, welcoming people from all backgrounds and faiths.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Visiting Information Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="section-title">Visiting Information</h2>
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <i class="fas fa-clock fa-2x text-primary mb-3"></i>
+                                <h5>Opening Hours</h5>
+                                <p>Morning: 5:00 AM - 12:00 PM<br>
+                                Evening: 4:00 PM - 8:30 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <i class="fas fa-map-marker-alt fa-2x text-primary mb-3"></i>
+                                <h5>Location</h5>
+                                <p>{{ temple.location }}<br>
+                                <small class="text-muted">Sacred grounds of spiritual significance</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %} 

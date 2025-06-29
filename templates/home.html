@@ -1,0 +1,114 @@
+{% extends "base.html" %}
+
+{% block title %}Home - {{ temple.name }}{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="container">
+        <h1 class="hero-title">{{ temple.name }}</h1>
+        <p class="hero-subtitle">{{ temple.description }}</p>
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="row text-center">
+                    <div class="col-md-4 mb-3">
+                        <div class="bg-white bg-opacity-20 p-3 rounded">
+                            <i class="fas fa-om fa-2x mb-2"></i>
+                            <h5>Presiding Deity</h5>
+                            <p>{{ temple.deity }}</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="bg-white bg-opacity-20 p-3 rounded">
+                            <i class="fas fa-map-marker-alt fa-2x mb-2"></i>
+                            <h5>Location</h5>
+                            <p>{{ temple.location }}</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="bg-white bg-opacity-20 p-3 rounded">
+                            <i class="fas fa-calendar-alt fa-2x mb-2"></i>
+                            <h5>Established</h5>
+                            <p>{{ temple.established }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Welcome Section -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="section-title">Welcome to {{ temple.name }}</h2>
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <p class="lead mb-4">
+                    Discover the rich spiritual heritage and ancient wisdom preserved within the sacred walls of our temple. 
+                    A place where devotion meets tradition, and where every prayer echoes through centuries of faith.
+                </p>
+                <div class="row mt-5">
+                    <div class="col-md-6 mb-4">
+                        <div class="card h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-history fa-3x text-primary mb-3"></i>
+                                <h4>Sacred History</h4>
+                                <p>Explore the ancient origins and spiritual significance of our temple through centuries of devotion.</p>
+                                <a href="{{ url_for('about') }}" class="btn btn-primary">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="card h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-images fa-3x text-primary mb-3"></i>
+                                <h4>Photo Gallery</h4>
+                                <p>View archival photographs and historical documents that capture the essence of our temple's legacy.</p>
+                                <a href="{{ url_for('photos') }}" class="btn btn-primary">View Gallery</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Quick Facts Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="section-title">Temple Highlights</h2>
+        <div class="row">
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="text-center">
+                    <i class="fas fa-pray fa-3x text-primary mb-3"></i>
+                    <h5>Daily Prayers</h5>
+                    <p>Regular spiritual ceremonies and rituals</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="text-center">
+                    <i class="fas fa-users fa-3x text-primary mb-3"></i>
+                    <h5>Community</h5>
+                    <p>Welcoming devotees from all walks of life</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="text-center">
+                    <i class="fas fa-book-open fa-3x text-primary mb-3"></i>
+                    <h5>Wisdom</h5>
+                    <p>Ancient teachings and spiritual guidance</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="text-center">
+                    <i class="fas fa-heart fa-3x text-primary mb-3"></i>
+                    <h5>Peace</h5>
+                    <p>A sanctuary for inner peace and reflection</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %} 

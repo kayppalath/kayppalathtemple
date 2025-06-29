@@ -1,0 +1,133 @@
+{% extends "base.html" %}
+
+{% block title %}Upload Photos - {{ temple.name }}{% endblock %}
+
+{% block content %}
+<!-- Upload Hero Section -->
+<section class="hero-section" style="padding: 80px 0;">
+    <div class="container">
+        <h1 class="hero-title">Upload Photos</h1>
+        <p class="hero-subtitle">Share your temple memories and historical documents</p>
+    </div>
+</section>
+
+<!-- Upload Form Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="upload-form">
+            <h2 class="section-title">Share Your Photos</h2>
+            <p class="text-center mb-4">
+                Help preserve the temple's history by uploading photographs, documents, or artwork. 
+                Your contributions will be part of our digital archive for future generations.
+            </p>
+            
+            <form method="POST" enctype="multipart/form-data">
+                <div class="mb-4">
+                    <label for="photo" class="form-label">
+                        <i class="fas fa-upload me-2"></i>Select File
+                    </label>
+                    <input type="file" class="form-control" id="photo" name="photo" 
+                           accept=".jpg,.jpeg,.png,.gif,.pdf" required>
+                    <div class="form-text">
+                        Supported formats: JPG, PNG, GIF, PDF (Max size: 16MB)
+                    </div>
+                </div>
+                
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary btn-lg">
+                        <i class="fas fa-cloud-upload-alt me-2"></i>Upload File
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- Upload Guidelines Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="section-title">Upload Guidelines</h2>
+        <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-check-circle fa-3x text-success mb-3"></i>
+                        <h5>What to Upload</h5>
+                        <ul class="list-unstyled text-start">
+                            <li><i class="fas fa-check text-success me-2"></i>Temple architecture photos</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Ritual and ceremony images</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Historical documents</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Festival celebrations</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Traditional artwork</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-info-circle fa-3x text-info mb-3"></i>
+                        <h5>File Requirements</h5>
+                        <ul class="list-unstyled text-start">
+                            <li><i class="fas fa-info text-info me-2"></i>Maximum file size: 16MB</li>
+                            <li><i class="fas fa-info text-info me-2"></i>Image formats: JPG, PNG, GIF</li>
+                            <li><i class="fas fa-info text-info me-2"></i>Document format: PDF</li>
+                            <li><i class="fas fa-info text-info me-2"></i>High quality preferred</li>
+                            <li><i class="fas fa-info text-info me-2"></i>Clear, well-lit images</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-shield-alt fa-3x text-warning mb-3"></i>
+                        <h5>Important Notes</h5>
+                        <ul class="list-unstyled text-start">
+                            <li><i class="fas fa-exclamation text-warning me-2"></i>Respect privacy and dignity</li>
+                            <li><i class="fas fa-exclamation text-warning me-2"></i>No inappropriate content</li>
+                            <li><i class="fas fa-exclamation text-warning me-2"></i>Ensure proper permissions</li>
+                            <li><i class="fas fa-exclamation text-warning me-2"></i>Maintain cultural sensitivity</li>
+                            <li><i class="fas fa-exclamation text-warning me-2"></i>Include context when possible</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Upload Benefits Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h3>Why Share Your Photos?</h3>
+                <div class="row mt-4">
+                    <div class="col-md-4 mb-4">
+                        <div class="text-center">
+                            <i class="fas fa-history fa-2x text-primary mb-3"></i>
+                            <h5>Preserve History</h5>
+                            <p class="text-muted">Help maintain the temple's historical record for future generations</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="text-center">
+                            <i class="fas fa-globe fa-2x text-primary mb-3"></i>
+                            <h5>Share Culture</h5>
+                            <p class="text-muted">Allow people worldwide to experience the temple's spiritual significance</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="text-center">
+                            <i class="fas fa-heart fa-2x text-primary mb-3"></i>
+                            <h5>Build Community</h5>
+                            <p class="text-muted">Connect devotees and create a shared digital heritage</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %} 
